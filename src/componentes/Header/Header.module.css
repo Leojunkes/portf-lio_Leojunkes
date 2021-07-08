@@ -1,0 +1,10 @@
+.containerHeader {
+  height: 100%;
+  background: var(--hardblue);
+  border-bottom: 1px solid var(--creme);
+  display: flex;
+
+}
+.containerHeader img {
+  height: 60px;
+}

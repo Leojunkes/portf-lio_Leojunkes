@@ -1,0 +1,8 @@
+.containerFooter{
+    height:20px;
+    background: var(--hardblue);
+    color: var(--creme);
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
