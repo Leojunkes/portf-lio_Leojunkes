@@ -1,6 +1,9 @@
 import styles from '../styles/Home.module.css';
+import {FaRegHandPointRight, FaRegHandPointLeft} from 'react-icons/fa';
+import { ProjetosMais } from './ProjetosMais';
 
 export default function Home() {
+  
   return (
     <div className={styles.containerGeral}>
       <div className={styles.container1Leo}>
@@ -34,10 +37,12 @@ export default function Home() {
             </label>
             <button>Em breve na playstore</button>
           </div>
+          
         </div>
+
       </div>
 
-      <div id="sobreMim" className={styles.containerSobreMim}>
+      <div styles={{margiLeft:10}} id="sobreMim" className={styles.containerSobreMim}>
         <h3>SOBRE MIM</h3>
         <div className={styles.containerSection}>
           <section htmlFor="">
@@ -58,7 +63,7 @@ export default function Home() {
       </div>
 
       <div id="curriculo" className={styles.containerCurriculo}>
-        <h3> Meu Currículo</h3>
+         <h3><FaRegHandPointRight className={styles.handFa} /> Meu Currículo <FaRegHandPointLeft className={styles.handFa}/></h3> 
         <section>
           Para visualizar meu currículo basta logar no google com sua conta e
           vai abrir no Word
@@ -67,7 +72,7 @@ export default function Home() {
 
       <div id="oportunidades" className={styles.containerOportunidades}>
         <h3>Disponível para oportunidades</h3>
-        <label htmlFor="">leojn8@gmail.com</label>
+        <label htmlFor=""> <FaRegHandPointRight className={styles.handFa1}/>  leojn8@gmail.com <FaRegHandPointLeft className={styles.handFa1}/></label>
       </div>
     </div>
   );

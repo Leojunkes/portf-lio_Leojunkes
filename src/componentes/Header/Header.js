@@ -6,11 +6,21 @@ export function Header() {
     <div className={styles.containerHeader}>
       <img src="/imagens/logoLeojunkes.png" alt="" />
       <div className={styles.containerOpcoes}>
-        <Link href="#projetos">Projestos</Link>
-        <Link href="#projetos">Sobre Mim</Link>
-        <Link href="#projetos">Tecnologias</Link>
-        <Link href="#projetos">Currículo</Link>
-        <Link href="#projetos">Contato</Link>
+        <Link href="#projetos">
+          <label htmlFor="">Projetos |</label>
+        </Link>
+        <Link href="#sobreMim">
+          <label htmlFor=""> Sobre Mim |</label>
+        </Link>
+        <Link href="#tecnologias">
+          <label htmlFor=""> Tecnologias |</label>
+        </Link>
+        <Link href="#curriculo">
+          <label htmlFor=""> Meu currículo |</label>
+        </Link>
+        <Link href="#oportunidades">
+          <label htmlFor=""> Contato</label>
+        </Link>
       </div>
     </div>
   );

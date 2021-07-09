@@ -5,8 +5,8 @@
   text-align: center;
 }
 .container1Leo img {
-  width: 185px;
-  height: 170px;
+  width: 11.563rem;
+  height: 10.625rem;
   margin-top: 13px;
 }
 .container1Leo section {
@@ -15,7 +15,7 @@
 }
 .containerGeralProjetosLeo {
   height: 100%;
-  width: 100%;
+  
   background: var(--creme);
   color: var(--hardblue);
   margin-top: 10px;
@@ -23,8 +23,8 @@
   padding-left: 13px;
 }
 .containerGeralProjetosLeo img {
-  width: 380px;
-  height: 235px;
+  width: 23.75rem;
+  height: 14.688rem;
 }
 .containerProjLeo {
   display: flex;
@@ -57,10 +57,10 @@
 }
 
 .imgSiteMeProjetosContainer {
-  max-width: 400px;
+  max-width: 25rem;
 }
 .imgNihongoProjetosContainer {
-  max-width: 400px;
+  max-width: 25rem;
 }
 .containerTecnologias {
   height: 100%;
@@ -72,8 +72,8 @@
 }
 
 .containerTecnologias img {
-  width: 380px;
-  height: 235px;
+  width: 23.75rem;
+  height: 14.688rem;
 }
 .containerTecLeo {
   display: flex;
@@ -107,3 +107,15 @@
   justify-content:center;
   justify-content: space-evenly;
 }
+.handFa{
+  color: yellow;
+}
+.handFa1{
+  color:blue;
+}
+/* @media (max-width:745px){
+  .containerGeral{
+    display: flexbox;
+    
+  }
+} */
