@@ -10,6 +10,8 @@
   --creme: #fcca97;
   --mostard: #ded61f;
   --purple: #231fde;
+  --gray-50:#e6e6e6;
+
 }
 @media (max-width: 1080px) {
   html {

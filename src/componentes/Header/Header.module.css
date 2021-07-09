@@ -3,17 +3,29 @@
   background: var(--hardblue);
   border-bottom: 1px solid var(--creme);
   display: flex;
-  
 }
 .containerHeader img {
   height: 60px;
 }
-.containerHeader label{
-    color: var(--white);
+
+.containerHeader label {
+  color: var(--white);
 }
-.containerOpcoes{
-    margin-top:20px;
-    margin-left: 10px;
+.containerOpcoes {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.containerMenu {
+  display: flex;
 }
 
-
+@media (max-width: 560px) {
+  .containerTablist {
+    display: none;
+  }
+}
+@media (min-width: 560px) {
+  .containerMenu {
+    display: none;
+  }
+}

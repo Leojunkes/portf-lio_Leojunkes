@@ -1,6 +1,7 @@
 import styles from '../styles/Home.module.css';
 import {FaRegHandPointRight, FaRegHandPointLeft} from 'react-icons/fa';
 import { ProjetosMais } from './ProjetosMais';
+import { Button } from '@chakra-ui/react';
 
 export default function Home() {
   
@@ -15,7 +16,7 @@ export default function Home() {
           </label>
           <label htmlFor="">motorista de App.</label>
         </section>
-        <button type="button">Contato</button>
+        <Button _hover border="0" size='sm' type="button">Contato</Button>
       </div>
 
       <div id="projetos" className={styles.containerGeralProjetosLeo}>
@@ -24,10 +25,10 @@ export default function Home() {
           <div className={styles.imgSiteMeProjetosContainer}>
             <img src="/imagens/projetoSiteME.png" alt="" />
             <label htmlFor="">
-              Site criado por mim, para Melissa, Doce de mel doceria.Projeto
-              feito em React-js, deploy na Vercel.
+              Site criado por mim, para Melissa, Doces de mel doceria.Projeto
+              feito em React-js com Next-js, deploy na Vercel.
             </label>
-            <button>Ver Projeto</button>
+            <Button _hover style={{marginTop:5}}>Ver Projeto</Button>
           </div>
           <div className={styles.imgNihongoProjetosContainer}>
             <img src="/imagens/projetoNihongo.png" alt="" />
@@ -35,7 +36,7 @@ export default function Home() {
               Quizz de memorização de caracteres japonês,escolha entre alfabeto
               Hiragana ou Katakana, criado em React-native.
             </label>
-            <button>Em breve na playstore</button>
+            <Button _hover style={{marginTop:5}}>Em breve na playstore</Button>
           </div>
           
         </div>
@@ -55,10 +56,10 @@ export default function Home() {
       </div>
 
       <div id="tecnologias" className={styles.containerTecnologias}>
-        <img src="/imagens/fotoTec.png" alt="" />
+        <img className={styles.ImgFototec} src="/imagens/fotoTec.png" alt="" />
         <div className={styles.containerTecLeo}>
           <h3>TECNOLOGIAS</h3>
-          <img src="/imagens/tecnologiasLeo.png" alt="" />
+          <img className={styles.ImgFotecLeo} src="/imagens/tecnologiasLeo.png" alt="" />
         </div>
       </div>
 

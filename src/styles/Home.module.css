@@ -1,8 +1,13 @@
 .container1Leo {
   height: 100%;
   background: var(--hardblue);
-  color: var(--white);
+  color: var(--gray-50);
   text-align: center;
+  padding-bottom: 10px;
+}
+.container1Leo button {
+  background: var(--creme);
+  color: var(--hardblue);
 }
 .container1Leo img {
   width: 11.563rem;
@@ -22,6 +27,11 @@
   justify-content: space-between;
   padding-left: 13px;
 }
+.containerGeralProjetosLeo button{
+  color: var(--gray-50);
+  background: var(--hardblue);
+  
+}
 .containerGeralProjetosLeo img {
   width: 23.75rem;
   height: 14.688rem;
@@ -40,7 +50,7 @@
 .containerSobreMim {
   height: 200px;
   background: var(--hardblue);
-  color: var(--white);
+  color: var(--gray-50);
   margin-top: 10px;
   padding-top: 13px;
   display: flex;
@@ -58,12 +68,19 @@
 
 .imgSiteMeProjetosContainer {
   max-width: 25rem;
+  display: flex;
+  flex-direction: column ;
+  align-items: flex-start;
 }
 .imgNihongoProjetosContainer {
   max-width: 25rem;
+  display: flex;
+  flex-direction: column ;
+  align-items: flex-start;
 }
 .containerTecnologias {
   height: 100%;
+  
   background: var(--creme);
   margin-top: 10px;
   color: var(--hardblue);
@@ -71,8 +88,18 @@
   justify-content: space-around;
 }
 
-.containerTecnologias img {
+/* .containerTecnologias img {
   width: 23.75rem;
+  height: 14.688rem;
+  
+} */
+.ImgFototec{
+  width: 100%;
+  height: 17.600rem;
+  opacity: 0.9;
+}
+.ImgFotecLeo{
+  width: 24.75rem;
   height: 14.688rem;
 }
 .containerTecLeo {
@@ -86,7 +113,7 @@
 .containerCurriculo {
   height: 200px;
   background: var(--hardblue);
-  color: var(--white);
+  color: var(--gray-50);
   margin-top: 10px;
   padding-top: 13px;
   display: flex;
@@ -113,9 +140,16 @@
 .handFa1{
   color:blue;
 }
-/* @media (max-width:745px){
-  .containerGeral{
-    display: flexbox;
+@media (max-width:745px){
+  .containerProjLeo{
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
     
   }
-} */
+  .containerTecnologias{
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+  }
+} 
