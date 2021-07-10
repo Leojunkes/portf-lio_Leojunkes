@@ -1,6 +1,6 @@
 import styles from './Header.module.css';
 
-import {GiHamburgerMenu} from 'react-icons/gi'
+import { GiHamburgerMenu } from 'react-icons/gi';
 import Link from 'next/link';
 import {
   Tabs,
@@ -30,71 +30,106 @@ export function Header() {
       <div className={styles.containerTablist}>
         <Tabs>
           <TabList>
+            <a href="#projetos">
             <Tab
               style={{
                 color: 'white',
                 marginTop: 10,
                 background: '#322b3d',
-                border: '0',
+                
               }}
             >
               Projetos
             </Tab>
+            </a>
+            <a href="#sobreMim">
             <Tab
               style={{
                 color: 'white',
                 marginTop: 10,
                 background: '#322b3d',
-                border: '0',
+                
               }}
             >
               Sobre Mim
             </Tab>
+            </a>
+            <a href="#tecnologias">
             <Tab
               style={{
                 color: 'white',
                 marginTop: 10,
                 background: '#322b3d',
-                border: '0',
+                
               }}
             >
               Tecnologias
             </Tab>
+            </a>
+            <a href="#curriculo">
             <Tab
               style={{
                 color: 'white',
                 marginTop: 10,
                 background: '#322b3d',
-                border: '0',
+                
               }}
             >
               Meu Currículo
             </Tab>
+            </a>
+            <a href="#oportunidades">
             <Tab
               style={{
                 color: 'white',
                 marginTop: 10,
                 background: '#322b3d',
-                border: '0',
+               
               }}
             >
               Contato
             </Tab>
+            </a>
+            
           </TabList>
         </Tabs>
       </div>
 
       <div className={styles.containerMenu}>
         <Menu>
-          <MenuButton style={{background:'#322b3d', border: '0'}} as="" rightIcon="">
-            <GiHamburgerMenu style={{color:'white', fontSize:'25'}} />
+          <MenuButton
+            style={{ background: '#322b3d', border: '0' }}
+            as=""
+            rightIcon=""
+          >
+            <GiHamburgerMenu style={{ color: 'white', fontSize: '25' }} />
           </MenuButton>
-          <MenuList style={{background:'#fcca97'}}>
-            <MenuItem style={{background:'#322b3d', color:'white'}}>Projetos</MenuItem>
-            <MenuItem style={{background:'#322b3d', color:'white'}}>Sobre Mim</MenuItem>
-            <MenuItem style={{background:'#322b3d', color:'white'}}>Tecnologias</MenuItem>
-            <MenuItem style={{background:'#322b3d', color:'white'}}>Meu Currículo</MenuItem>
-            <MenuItem style={{background:'#322b3d', color:'white'}}>Contato</MenuItem>
+          <MenuList style={{ background: '#fcca97' }}>
+            <a href="#projetos">
+              <MenuItem style={{ background: '#322b3d', color: 'white' }}>
+                Projetos
+              </MenuItem>
+            </a>
+            <a href="#sobreMim">
+              <MenuItem style={{ background: '#322b3d', color: 'white' }}>
+                Sobre Mim
+              </MenuItem>
+            </a>
+            <a href="#tecnologias">
+              <MenuItem style={{ background: '#322b3d', color: 'white' }}>
+                Tecnologias
+              </MenuItem>
+            </a>
+            <a href="#curriculo">
+              <MenuItem style={{ background: '#322b3d', color: 'white' }}>
+                Meu Currículo
+              </MenuItem>
+            </a>
+            <a href="#contato">
+              <MenuItem style={{ background: '#322b3d', color: 'white' }}>
+                Contato
+              </MenuItem>
+            </a>
           </MenuList>
         </Menu>
       </div>

@@ -140,6 +140,10 @@
 .handFa1{
   color:blue;
 }
+.containerIcons{
+  margin-top:10px;
+  
+}
 @media (max-width:745px){
   .containerProjLeo{
     display: flex;
