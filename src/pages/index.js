@@ -46,24 +46,23 @@ export default function Home() {
         <h3>PROJETOS</h3>
         <div className={styles.containerProjLeo}>
           <div className={styles.imgSiteMeProjetosContainer}>
-            <img src="/imagens/projetoSiteME.png" alt="" />
+            <img className={styles.imgCadastro} src="/imagens/klcadastro2.png" alt="" />
             <label htmlFor="">
-              Site criado por mim, para Melissa, Doces de mel doceria.Projeto
-              feito em React-js com Next-js, deploy na Vercel.
+              Uma aplicação para cadastro de empresas, cadastre empresas e seus contatos, CRUD total do zero,backEnd com Node-ts e frontEnd com React-js.
             </label>
-            <a target="_blank" href="https://docesdemel.com.br/">
+            <a target="_blank">
               <Button _hover style={{ marginTop: 5 }}>
-                Ver Projeto
+                Breve em Produção
               </Button>
             </a>
           </div>
           <div className={styles.imgNihongoProjetosContainer}>
-            <img src="/imagens/projetoNihongo.png" alt="" />
+            <img className={styles.imgNihongo} src="/imagens/projetoNihongo.png" alt="" />
             <label htmlFor="">
               Quizz de memorização de caracteres japonês,escolha entre alfabeto
               Hiragana ou Katakana, criado em React-native.
             </label>
-            <Button _hover style={{ marginTop: 5 }}>
+            <Button style='' _hover style={{ marginTop: 5 }}>
               Em breve na playstore
             </Button>
           </div>
@@ -78,7 +77,7 @@ export default function Home() {
         <h3>SOBRE MIM</h3>
         <div className={styles.containerSection}>
           <section htmlFor="">
-            Olá sou Leonardo Junkes,e studo e desenvolvo fazem mais de 2
+            Olá sou Leonardo Junkes, estudo e desenvolvo fazem mais de 2
             anos(HTML, CSS, React-js, React-Native, Next-js...) Adoro esse mundo
             do desenvolvimento, e quando posso adoro jogar games, estou a cada
             dia mais motivado para aprender e criar!

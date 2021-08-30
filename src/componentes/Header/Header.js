@@ -1,7 +1,14 @@
 import styles from './Header.module.css';
-
+import { Flex } from '@chakra-ui/react';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import Link from 'next/link';
+
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+} from '@chakra-ui/react';
+
 import {
   Tabs,
   TabList,
@@ -9,18 +16,6 @@ import {
   Tab,
   TabPanel,
   Button,
-} from '@chakra-ui/react';
-import {
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuIcon,
-  MenuCommand,
-  MenuDivider,
 } from '@chakra-ui/react';
 
 export function Header() {
@@ -31,107 +26,88 @@ export function Header() {
         <Tabs>
           <TabList>
             <a href="#projetos">
-            <Tab
-              style={{
-                color: 'white',
-                marginTop: 10,
-                background: '#322b3d',
-                
-              }}
-            >
-              Projetos
-            </Tab>
+              <Tab
+                style={{
+                  color: 'white',
+                  marginTop: 10,
+                  background: '#322b3d',
+                }}
+              >
+                Projetos
+              </Tab>
             </a>
             <a href="#sobreMim">
-            <Tab
-              style={{
-                color: 'white',
-                marginTop: 10,
-                background: '#322b3d',
-                
-              }}
-            >
-              Sobre Mim
-            </Tab>
+              <Tab
+                style={{
+                  color: 'white',
+                  marginTop: 10,
+                  background: '#322b3d',
+                }}
+              >
+                Sobre Mim
+              </Tab>
             </a>
             <a href="#tecnologias">
-            <Tab
-              style={{
-                color: 'white',
-                marginTop: 10,
-                background: '#322b3d',
-                
-              }}
-            >
-              Tecnologias
-            </Tab>
+              <Tab
+                style={{
+                  color: 'white',
+                  marginTop: 10,
+                  background: '#322b3d',
+                }}
+              >
+                Tecnologias
+              </Tab>
             </a>
             <a href="#curriculo">
-            <Tab
-              style={{
-                color: 'white',
-                marginTop: 10,
-                background: '#322b3d',
-                
-              }}
-            >
-              Meu Currículo
-            </Tab>
+              <Tab
+                style={{
+                  color: 'white',
+                  marginTop: 10,
+                  background: '#322b3d',
+                }}
+              >
+                Meu Currículo
+              </Tab>
             </a>
             <a href="#oportunidades">
-            <Tab
-              style={{
-                color: 'white',
-                marginTop: 10,
-                background: '#322b3d',
-               
-              }}
-            >
-              Contato
-            </Tab>
+              <Tab
+                style={{
+                  color: 'white',
+                  marginTop: 10,
+                  background: '#322b3d',
+                }}
+              >
+                Contato
+              </Tab>
             </a>
-            
           </TabList>
         </Tabs>
       </div>
 
       <div className={styles.containerMenu}>
-        <Menu>
-          <MenuButton
-            style={{ background: '#322b3d', border: '0' }}
-            as=""
-            rightIcon=""
-          >
-            <GiHamburgerMenu style={{ color: 'white', fontSize: '25' }} />
-          </MenuButton>
-          <MenuList style={{ background: '#fcca97' }}>
-            <a href="#projetos">
-              <MenuItem style={{ background: '#322b3d', color: 'white' }}>
-                Projetos
-              </MenuItem>
-            </a>
-            <a href="#sobreMim">
-              <MenuItem style={{ background: '#322b3d', color: 'white' }}>
-                Sobre Mim
-              </MenuItem>
-            </a>
-            <a href="#tecnologias">
-              <MenuItem style={{ background: '#322b3d', color: 'white' }}>
-                Tecnologias
-              </MenuItem>
-            </a>
-            <a href="#curriculo">
-              <MenuItem style={{ background: '#322b3d', color: 'white' }}>
-                Meu Currículo
-              </MenuItem>
-            </a>
-            <a href="#contato">
-              <MenuItem style={{ background: '#322b3d', color: 'white' }}>
-                Contato
-              </MenuItem>
-            </a>
-          </MenuList>
-        </Menu>
+        <Breadcrumb fontWeight="medium" fontSize="sm">
+          <BreadcrumbItem>
+            <BreadcrumbLink href="#projetos">Projetos</BreadcrumbLink>
+          </BreadcrumbItem>
+
+          <BreadcrumbItem>
+            <BreadcrumbLink href="#sobreMim">Sobre Mim</BreadcrumbLink>
+          </BreadcrumbItem>
+
+          <BreadcrumbItem>
+            <BreadcrumbLink href="#tecnologias">Tecnologias</BreadcrumbLink>
+          </BreadcrumbItem>
+
+          <BreadcrumbItem>
+            <BreadcrumbLink href="#curriculo">Meu Currículo</BreadcrumbLink>
+          </BreadcrumbItem>
+
+          <BreadcrumbItem>
+            <BreadcrumbLink href="#oportunidades">Contato</BreadcrumbLink>
+          </BreadcrumbItem>
+
+         
+        </Breadcrumb>
       </div>
 
       {/* <div className={styles.containerOpcoes}>

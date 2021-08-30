@@ -17,6 +17,8 @@
 }
 .containerMenu {
   display: flex;
+  color: white;
+  align-items: center;
 }
 
 @media (max-width: 560px) {

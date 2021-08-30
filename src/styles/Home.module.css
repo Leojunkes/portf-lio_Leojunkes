@@ -32,10 +32,16 @@
   background: var(--hardblue);
   
 }
-.containerGeralProjetosLeo img {
-  width: 23.75rem;
-  height: 14.688rem;
+
+.imgNihongo{
+  width:22.70rem;
+  height:15.75rem;
 }
+.imgCadastro{
+width:22.75rem;
+height:17.80rem;
+}
+
 .containerProjLeo {
   display: flex;
   justify-content: space-around;
@@ -77,6 +83,7 @@
   display: flex;
   flex-direction: column ;
   align-items: flex-start;
+  padding-top: 31px;
 }
 .containerTecnologias {
   height: 100%;
