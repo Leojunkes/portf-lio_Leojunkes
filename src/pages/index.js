@@ -5,14 +5,82 @@ import {
   AiOutlineWhatsApp,
   AiOutlineGithub,
 } from 'react-icons/ai';
-import { ProjetosMais } from './ProjetosMais';
-import { Button } from '@chakra-ui/react';
+
+import { Button, Flex, Label } from '@chakra-ui/react';
+import { useState } from 'react';
 
 export default function Home() {
+  const [isOpen, setIsopen] = useState(false);
+
+  const isDivShow = (
+    <>
+      <Flex h="100%" maxWidth="25rem" flexDirection="column">
+        <img
+          className={styles.imgCadastro}
+          src="/imagens/klcadastro2.png"
+          alt=""
+        />
+        <label htmlFor="">
+          Uma aplicação para cadastro de empresas, cadastre empresas e seus
+          contatos, CRUD total do zero,backEnd com Node-ts e frontEnd com
+          React-js.
+        </label>
+        <a target="_blank">
+          <Button
+            border="none"
+            colorScheme="blue"
+            _hover
+            style={{ marginTop: 5 }}
+          >
+            Breve em Produção
+          </Button>
+        </a>
+      </Flex>
+
+      <Flex marginBottom="100px" maxWidth="25rem" flexDirection="column">
+        <img
+          className={styles.imgNihongo}
+          src="/imagens/listAfazeres.png"
+          alt=""
+        />
+        <label htmlFor="">
+          Uma lista de Afazeres, simples e funcional, crie sua lista, exclua,
+          salve, marque como Realizado, recurso salva no localStorage.
+        </label>
+        <Button
+          border="none"
+          colorScheme="green"
+          style=""
+          _hover
+          style={{ marginTop: 5 }}
+        >
+          Em breve
+        </Button>
+      </Flex>
+    </>
+  );
+
+  function apertar(e) {
+    e.preventDefault();
+    setIsopen(true);
+  }
+
   return (
-    <div className={styles.containerGeral}>
-      <div className={styles.container1Leo}>
-        <img src="/imagens/leoFoto.png" alt="" />
+    <>
+      <Flex
+        height="100%"
+        background="var(--hardblue)"
+        color="var(--gray-50)"
+        alignItems="center"
+        paddingBottom="10px"
+        flexDirection="column"
+        textAlign="center"
+      >
+        <img
+          style={{ width: '11.563rem', height: '10.625rem', marginTop: '13px' }}
+          src="/imagens/leoFoto.png"
+          alt=""
+        />
         <h3>Leonardo Junkes</h3>
         <section>
           <label>
@@ -20,7 +88,7 @@ export default function Home() {
           </label>
           <label htmlFor="">motorista de App.</label>
         </section>
-        <Button _hover border="0" size="sm" type="button">
+        <Button bg="var(--creme)" _hover border="0" size="sm" type="button">
           Contato
         </Button>
         <div className={styles.containerIcons}>
@@ -40,34 +108,77 @@ export default function Home() {
             <AiOutlineWhatsApp style={{ fontSize: 25 }} />
           </a>
         </div>
-      </div>
+      </Flex>
 
-      <div id="projetos" className={styles.containerGeralProjetosLeo}>
-        <h3>PROJETOS</h3>
-        <div className={styles.containerProjLeo}>
-          <div className={styles.imgSiteMeProjetosContainer}>
-            <img className={styles.imgCadastro} src="/imagens/klcadastro2.png" alt="" />
+      <Flex
+        
+        h="100%"
+        bg="var(--creme)"
+        color="var(--hardblue)"
+        mt="10px"
+        justifyContent="space-between"
+        paddingLeft="13px"
+        flexDirection="column"
+      >
+        <h3 style={{ textAlign: 'center' }}>PROJETOS</h3>
+        <Flex className={styles.containerProjLeo} h="100%" justifyContent="space-around">
+          <Flex h="100%" maxWidth="25rem" flexDirection="column">
+            <img
+              className={styles.imgCadastro}
+              src="/imagens/klcadastro2.png"
+              alt=""
+            />
             <label htmlFor="">
-              Uma aplicação para cadastro de empresas, cadastre empresas e seus contatos, CRUD total do zero,backEnd com Node-ts e frontEnd com React-js.
+              Uma aplicação para cadastro de empresas, cadastre empresas e seus
+              contatos, CRUD total do zero,backEnd com Node-ts e frontEnd com
+              React-js.
             </label>
             <a target="_blank">
-              <Button _hover style={{ marginTop: 5 }}>
+              <Button
+                marginBottom='10px'
+                border="none"
+                colorScheme="blue"
+                _hover
+                style={{ marginTop: 5 }}
+              >
                 Breve em Produção
               </Button>
             </a>
-          </div>
-          <div className={styles.imgNihongoProjetosContainer}>
-            <img className={styles.imgNihongo} src="/imagens/projetoNihongo.png" alt="" />
+          </Flex>
+
+          <Flex maxWidth="25rem" flexDirection="column">
+            <img
+              className={styles.imgNihongo}
+              src="/imagens/listAfazeres.png"
+              alt=""
+            />
             <label htmlFor="">
-              Quizz de memorização de caracteres japonês,escolha entre alfabeto
-              Hiragana ou Katakana, criado em React-native.
+              Uma lista de Afazeres, simples e funcional, crie sua lista,
+              exclua, salve, marque como Realizado, recurso salva no
+              localStorage.
             </label>
-            <Button style='' _hover style={{ marginTop: 5 }}>
-              Em breve na playstore
-            </Button>
-          </div>
-        </div>
-      </div>
+            <a target="_blank" href="https://junkes-lista.vercel.app/">
+              <Button
+               marginBottom='10px'
+                border="none"
+                colorScheme="green"
+                style=""
+                _hover
+                style={{ marginTop: 5 }}
+              >
+                Faça o teste
+              </Button>
+            </a>
+          </Flex>
+        </Flex>
+        <a target="_blank" href="http://github.com/Leojunkes">
+          <Flex ml="-3.5" color="gray.50" bg="gray.900">
+            <label style={{ margin: '10px auto'}}>
+              Conheça mais projetos no meu GITHUB clicando AQUI
+            </label>
+          </Flex>
+        </a>
+      </Flex>
 
       <div
         styles={{ margiLeft: 10 }}
@@ -108,9 +219,9 @@ export default function Home() {
           </a>{' '}
           <FaRegHandPointLeft className={styles.handFa} />
         </h3>
-        <section>
+        <section  style={{ marginLeft: '8px', color:'gray' }}>
           Para visualizar meu currículo basta logar no google com sua conta e
-          vai abrir no Word
+          abrir no Word
         </section>
       </div>
 
@@ -126,6 +237,7 @@ export default function Home() {
           </label>
         </a>
       </div>
-    </div>
+      <Flex />
+    </>
   );
 }
