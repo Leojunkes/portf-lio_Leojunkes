@@ -1,13 +1,14 @@
-import styles from '../styles/Home.module.css';
-import { FaRegHandPointRight, FaRegHandPointLeft } from 'react-icons/fa';
+import styles from "../styles/Home.module.css";
+import { FaRegHandPointRight, FaRegHandPointLeft } from "react-icons/fa";
 import {
   AiOutlineLinkedin,
   AiOutlineWhatsApp,
   AiOutlineGithub,
-} from 'react-icons/ai';
+  ImWhatsapp,
+} from "react-icons/ai";
 
-import { Button, Flex, Label } from '@chakra-ui/react';
-import { useState } from 'react';
+import { Button, Flex, Label, HStack } from "@chakra-ui/react";
+import { useState } from "react";
 
 export default function Home() {
   const [isOpen, setIsopen] = useState(false);
@@ -77,7 +78,7 @@ export default function Home() {
         textAlign="center"
       >
         <img
-          style={{ width: '11.563rem', height: '10.625rem', marginTop: '13px' }}
+          style={{ width: "11.563rem", height: "10.625rem", marginTop: "13px" }}
           src="/imagens/leoFoto.png"
           alt=""
         />
@@ -92,26 +93,27 @@ export default function Home() {
           Contato
         </Button>
         <div className={styles.containerIcons}>
-          <a
-            target="blank"
-            href="https://www.linkedin.com/in/leonardo-junkes-nicolodelli-88089866/"
-          >
-            <AiOutlineLinkedin style={{ fontSize: 25 }} />
-          </a>
-          <a target="blank" href="https://github.com/Leojunkes">
-            <AiOutlineGithub style={{ fontSize: 25 }} />
-          </a>
-          <a
-            target="blank"
-            href="https://api.whatsapp.com/send?phone=5548999311384"
-          >
-            <AiOutlineWhatsApp style={{ fontSize: 25 }} />
-          </a>
+          <HStack spacing={4}>
+            <a
+              target="blank"
+              href="https://www.linkedin.com/in/leonardo-junkes-nicolodelli-88089866/"
+            >
+              <AiOutlineLinkedin style={{ fontSize: 25 }} />
+            </a>
+            <a target="blank" href="https://github.com/Leojunkes">
+              <AiOutlineGithub style={{ fontSize: 25 }} />
+            </a>
+            <a
+              target="blank"
+              href="https://api.whatsapp.com/send?phone=5548999311384"
+            >
+              <AiOutlineWhatsApp style={{ fontSize: 25 }} />
+            </a>
+          </HStack>
         </div>
       </Flex>
 
       <Flex
-        
         h="100%"
         bg="var(--creme)"
         color="var(--hardblue)"
@@ -120,8 +122,12 @@ export default function Home() {
         paddingLeft="13px"
         flexDirection="column"
       >
-        <h3 style={{ textAlign: 'center' }}>PROJETOS</h3>
-        <Flex className={styles.containerProjLeo} h="100%" justifyContent="space-around">
+        <h3 style={{ textAlign: "center" }}>PROJETOS</h3>
+        <Flex
+          className={styles.containerProjLeo}
+          h="100%"
+          justifyContent="space-around"
+        >
           <Flex h="100%" maxWidth="25rem" flexDirection="column">
             <img
               className={styles.imgCadastro}
@@ -135,7 +141,7 @@ export default function Home() {
             </label>
             <a target="_blank">
               <Button
-                marginBottom='10px'
+                marginBottom="10px"
                 border="none"
                 colorScheme="blue"
                 _hover
@@ -159,7 +165,7 @@ export default function Home() {
             </label>
             <a target="_blank" href="https://junkes-lista.vercel.app/">
               <Button
-               marginBottom='10px'
+                marginBottom="10px"
                 border="none"
                 colorScheme="green"
                 style=""
@@ -173,7 +179,7 @@ export default function Home() {
         </Flex>
         <a target="_blank" href="http://github.com/Leojunkes">
           <Flex ml="-3.5" color="gray.50" bg="gray.900">
-            <label style={{ margin: '10px auto'}}>
+            <label style={{ margin: "10px auto" }}>
               Conheça mais projetos no meu GITHUB clicando AQUI
             </label>
           </Flex>
@@ -210,16 +216,16 @@ export default function Home() {
 
       <div id="curriculo" className={styles.containerCurriculo}>
         <h3>
-          <FaRegHandPointRight className={styles.handFa} />{' '}
+          <FaRegHandPointRight className={styles.handFa} />{" "}
           <a
             target="_blank"
             href="https://docs.google.com/document/d/1poVD7AfymYo3GZnWVbX6oeM3xEvBslwm/edit"
           >
             Meu Currículo
-          </a>{' '}
+          </a>{" "}
           <FaRegHandPointLeft className={styles.handFa} />
         </h3>
-        <section  style={{ marginLeft: '8px', color:'gray' }}>
+        <section style={{ marginLeft: "8px", color: "gray" }}>
           Para visualizar meu currículo basta logar no google com sua conta e
           abrir no Word
         </section>
@@ -229,10 +235,10 @@ export default function Home() {
         <h3>Disponível para oportunidades</h3>
         <a target="_blank" href="mailto:leojn8@gmail.com">
           <label htmlFor="">
-            {' '}
+            {" "}
             <FaRegHandPointRight
               className={styles.handFa1}
-            /> leojn8@gmail.com{' '}
+            /> leojn8@gmail.com{" "}
             <FaRegHandPointLeft className={styles.handFa1} />
           </label>
         </a>

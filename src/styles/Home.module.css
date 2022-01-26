@@ -147,6 +147,7 @@
 }
 .containerIcons {
   margin-top: 10px;
+  justify-content: space-between ;
 }
 @media (max-width: 745px) {
   .containerProjLeo {
